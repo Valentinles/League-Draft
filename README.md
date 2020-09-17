@@ -1,7 +1,7 @@
 # League-Draft
 ASP .NET Core League of Legends random generator for champions, build sets, summoner spells and positions.
 
-<img src="https://i.postimg.cc/rmNs1kBG/index.png" width="15%"></img> <img src="https://i.postimg.cc/Gmz1xptm/solodraft.png" width="15%"></img> <img src="https://i.postimg.cc/5tGTsQVb/championdraft.png" width="15%"></img> <img src="https://i.postimg.cc/KYKs3cgV/teams.png" width="15%"></img> <img src="https://i.postimg.cc/dtqHmjyG/positions.png" width="15%"></img> <img src="https://i.postimg.cc/v8vXBxNT/positiondraft.png" width="15%"></img> 
+<img src="https://i.postimg.cc/rmNs1kBG/index.png" width="30%"></img> <img src="https://i.postimg.cc/Gmz1xptm/solodraft.png" width="30%"></img> <img src="https://i.postimg.cc/5tGTsQVb/championdraft.png" width="30%"></img> <img src="https://i.postimg.cc/KYKs3cgV/teams.png" width="30%"></img> <img src="https://i.postimg.cc/dtqHmjyG/positions.png" width="30%"></img> <img src="https://i.postimg.cc/v8vXBxNT/positiondraft.png" width="30%"></img> 
 
 ## Getting Started
 
