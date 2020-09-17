@@ -1,0 +1,40 @@
+﻿@model DraftViewModel
+@{
+    ViewData["Title"] = Model.Champion.Name + " " + "Draft";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Champion Setup</h1>
+</div>
+<br />
+<div class="card text-center">
+    <div class="card-header">
+        <h3><span class="badge badge-secondary">EZ WIN</span></h3>
+    </div>
+    <div class="card-body">
+        <img class="border" style="border-width:5px !important; border-radius: 10px;" src="@Model.Champion.ImageUrl" alt="Alternate Text" />
+        <h3 class="card-text">@Model.Champion.Name</h3>
+        <h5><span class="badge badge-primary">Items</span></h5>
+        <div class="d-flex justify-content-center">
+            @foreach (var item in Model.Build)
+            {
+                <img class="border" style="border-width:5px !important; border-radius: 10px;" src="@item.ImageUrl" width="55" data-toggle="tooltip" title="@item.Name" />
+            }
+        </div>
+    </div>
+    <div>
+        <img src="@Model.Position.ImageUrl" alt="Alternate Text" width="50" />
+    </div>
+    <div>
+        <h5><span class="badge badge-success">Summoner Spells</span></h5>
+        @foreach (var summonerSpell in Model.SummonerSpells)
+        {
+            <img class="border" style="border-width:5px !important; border-radius: 10px;" src="@summonerSpell.ImageUrl" width="50" data-toggle="tooltip" title="@summonerSpell.Name" />
+        }
+
+    </div>
+    <div class="card-footer text-muted">
+        Tip: Do not cheat on the build or spells!
+    </div>
+</div>

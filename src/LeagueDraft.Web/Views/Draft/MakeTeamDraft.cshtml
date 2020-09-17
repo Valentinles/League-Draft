@@ -1,0 +1,52 @@
+﻿@model TeamDraftViewModel
+@{
+    ViewData["Title"] = "MakeTeamDraft";
+}
+<div class="text-center">
+    <h1 class="display-4">Team Setup</h1>
+</div>
+<br />
+
+<div class="card text-center">
+    <div class="card-header">
+        <h3><span class="badge badge-secondary">EZ WIN</span></h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5 class="display-4">Champions</h5>
+                @foreach (var champion in Model.TeamSet)
+                {
+                    <img class="border" style="border-width:5px !important; border-radius: 10px;" src="@champion.Champion.ImageUrl" width="50" data-toggle="tooltip" title="@champion.Champion.Name" />
+                    <br />
+                }
+            </div>
+            <div class="col">
+                <h5 class="display-4">Spells</h5>
+                @foreach (var item in Model.TeamSet)
+                {
+                    @foreach (var spell in item.SummonerSpells)
+                    {
+
+                        <img class="border" style="border-width:5px !important; border-radius: 10px;" src="@spell.ImageUrl" width="50" data-toggle="tooltip" title="@spell.Name" />
+                    }
+                    <br />
+                }
+            </div>
+            <div class="col">
+                <h5 class="display-4">Builds</h5>
+                @foreach (var build in Model.TeamSet)
+                {
+                    foreach (var item in build.Build)
+                    {
+                        <img class="border" style="border-width:5px !important; border-radius: 10px;" src="@item.ImageUrl" width="50" data-toggle="tooltip" title="@item.Name" />
+                    }
+                    <br />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-footer text-muted text-center">
+    Tip: Do not change any items otherwise the build will not work as planned XD!
+</div>

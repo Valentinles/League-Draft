@@ -1,0 +1,19 @@
+﻿@model IEnumerable<AllPositionsViewModel>
+@{
+    ViewData["Title"] = "Positions";
+}
+<div class="text-center">
+    <h1 class="display-4">Lane picking...</h1>
+</div>
+<br />
+<div class="container text-center">
+    <div>
+        @foreach (var position in Model)
+        {
+            <div class="col-sm">
+                <br />
+                <a asp-action="MakeDraftByPosition" asp-controller="Draft" asp-route-id="@position.Id"><img src="@position.ImageUrl" alt="Alternate Text" width="50" /></a>
+            </div>
+        }
+    </div>
+</div>

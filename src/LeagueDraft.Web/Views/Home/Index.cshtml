@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AllChampionsViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, Summoner</h1>
+</div>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h3>Solo Draft</h3>
+            <p>Random champion with random build.</p>
+            <form>
+                <button class="btn btn-success" asp-action="MakeSoloDraft" asp-controller="Draft">Love inting</button>
+            </form>
+        </div>
+        <div class="col-sm">
+            <h3>Team Draft</h3>
+            <p>Team up with 5 random champions and builds.</p>
+            <form>
+                <button class="btn btn-success" asp-action="MakeTeamDraft" asp-controller="Draft">Boosted fives</button>
+            </form>
+        </div>
+        <div class="col-sm">
+            <h3>Position Draft</h3>
+            <p>Pick a role and get random champion and build to play.</p>
+            <form>
+                <button class="btn btn-success" asp-action="AllPositions" asp-controller="Draft">Rawrr</button>
+            </form>
+        </div>
+        <div class="col-sm">
+            <h3>Champion Draft</h3>
+            <p>Generates random build for the champion you select.</p>
+
+            @if (Model.Count() == 0)
+            {
+                <h4>Champions list is empty.</h4>
+            }
+
+            @foreach (var champion in Model)
+            {
+                <a asp-action="MakeDraftByChampion" asp-controller="Draft" asp-route-id="@champion.Id"><img src="@champion.ImageUrl" alt="Alternate Text" width="40" data-toggle="tooltip" title="@champion.Name" /></a>
+            }
+        </div>
+    </div>
+</div>
